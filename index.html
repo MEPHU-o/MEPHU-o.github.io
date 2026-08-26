@@ -8,148 +8,29 @@
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
-<script>
-/* ============================================================
-   PROFILE CONFIG
-   ============================================================ */
-
-const ME = {
-  github: "MEPHU-o",
-
-  name: "MEO PHURIN",
-
-  role: "นักศึกษาวิศวกรรมคอมพิวเตอร์ ปี 1 · มทร.อีสาน",
-
-  tagline: "กำลังเรียนรู้การเขียนโปรแกรม และสร้างโปรเจกต์ของตัวเอง",
-
-  about:
-    "สวัสดีครับ ผม MEO PHURIN นักศึกษาวิศวกรรมคอมพิวเตอร์ สนใจด้าน Programming, Web Development, IoT และเทคโนโลยีใหม่ ๆ ชอบทดลองสร้างโปรเจกต์และพัฒนาทักษะของตัวเองอยู่เสมอ",
-
-  learning: [
-    "HTML, CSS และ JavaScript",
-    "Git และ GitHub",
-    "Programming และการแก้ปัญหา",
-    "Computer Engineering",
-    "IoT และ Embedded Systems"
-  ],
-
-  works: [
-    {
-      title: "Personal Portfolio",
-      desc: "เว็บไซต์โปรไฟล์ส่วนตัวสำหรับแนะนำตัวและรวมผลงาน",
-      url: "https://mephu-o.github.io"
-    },
-    {
-      title: "Web Development",
-      desc: "ฝึกสร้างเว็บไซต์ด้วย HTML, CSS และ JavaScript",
-      url: "https://github.com/MEPHU-o"
-    },
-    {
-      title: "Computer Engineering",
-      desc: "เรียนรู้การเขียนโปรแกรม ระบบคอมพิวเตอร์ และเทคโนโลยี IoT",
-      url: "https://github.com/MEPHU-o"
-    }
-  ],
-
-  links: [
-    {
-      label: "GitHub",
-      url: "https://github.com/MEPHU-o"
-    }
-  ],
-
-  theme: "ocean"
-};
-</script>
-
 <style>
 
-/* ============================================================
-   BASE
-   ============================================================ */
-
-:root {
+:root{
   --bg:#0b1020;
   --line:#24304f;
   --text:#e8edf7;
   --muted:#93a1c0;
-  --surface:rgba(255,255,255,.05);
-
   --accent:#38bdf8;
-  --accent-soft:#0ea5e9;
   --glow1:#1d2a52;
   --glow2:#10305c;
-
+  --surface:rgba(255,255,255,.05);
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
 }
 
-
-/* ============================================================
-   THEMES
-   ============================================================ */
-
-[data-theme="ocean"] {
-  --accent:#38bdf8;
-  --accent-soft:#0ea5e9;
-  --glow1:#1d2a52;
-  --glow2:#10305c;
-}
-
-[data-theme="sunset"] {
-  --accent:#fb923c;
-  --accent-soft:#f97316;
-  --glow1:#4a2418;
-  --glow2:#5c2b10;
-}
-
-[data-theme="forest"] {
-  --accent:#34d399;
-  --accent-soft:#10b981;
-  --glow1:#14342a;
-  --glow2:#0f3d2e;
-}
-
-[data-theme="grape"] {
-  --accent:#c084fc;
-  --accent-soft:#a855f7;
-  --glow1:#2e1d52;
-  --glow2:#3d1a5c;
-}
-
-[data-theme="mono"] {
-  --accent:#e2e8f0;
-  --accent-soft:#cbd5e1;
-  --glow1:#1e293b;
-  --glow2:#0f172a;
-}
-
-[data-theme="mono-light"] {
-  --accent:#334155;
-  --accent-soft:#475569;
-  --glow1:#dbe3ee;
-  --glow2:#e6ebf3;
-
-  --bg:#f7f9fc;
-  --line:#ccd6e4;
-  --text:#0f172a;
-  --muted:#52627d;
-  --surface:rgba(15,23,42,.04);
-}
-
-
-/* ============================================================
-   GLOBAL
-   ============================================================ */
-
-* {
+*{
   box-sizing:border-box;
 }
 
-html {
+html{
   scroll-behavior:smooth;
 }
 
-body {
+body{
   margin:0;
   min-height:100vh;
 
@@ -177,31 +58,28 @@ body {
     var(--bg);
 }
 
-
-/* ============================================================
-   WRAPPER
-   ============================================================ */
-
-.wrap {
+.wrap{
   max-width:760px;
-  margin:0 auto;
+  margin:auto;
   padding:0 22px 80px;
 }
 
 
-/* ============================================================
+/* =========================
    HERO
-   ============================================================ */
+========================= */
 
-.hero {
+.hero{
   display:flex;
-  gap:22px;
   align-items:center;
+  gap:22px;
+
   padding:64px 0 8px;
+
   flex-wrap:wrap;
 }
 
-.avatar {
+.avatar{
   width:96px;
   height:96px;
 
@@ -211,8 +89,6 @@ body {
 
   object-fit:cover;
 
-  flex-shrink:0;
-
   background:var(--surface);
 
   box-shadow:
@@ -220,37 +96,12 @@ body {
     0 0 30px rgba(56,189,248,.15);
 }
 
-.avatar-fallback {
-  width:96px;
-  height:96px;
-
-  border-radius:50%;
-
-  flex-shrink:0;
-
-  border:2px solid var(--accent);
-
-  background:var(--surface);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:38px;
-  font-weight:700;
-
-  color:var(--accent);
-
-  box-shadow:
-    0 0 30px rgba(56,189,248,.15);
-}
-
-.hero-text {
+.hero-text{
   flex:1;
   min-width:240px;
 }
 
-.role {
+.role{
   font:
     600 12px/1
     var(--mono);
@@ -264,7 +115,7 @@ body {
   margin:0 0 8px;
 }
 
-h1 {
+h1{
   font-size:clamp(30px,6vw,46px);
   line-height:1.15;
 
@@ -273,7 +124,7 @@ h1 {
   letter-spacing:-.02em;
 }
 
-.tagline {
+.tagline{
   font-size:clamp(17px,2.6vw,20px);
 
   color:var(--text);
@@ -284,11 +135,11 @@ h1 {
 }
 
 
-/* ============================================================
+/* =========================
    ABOUT
-   ============================================================ */
+========================= */
 
-.about {
+.about{
   color:var(--muted);
 
   margin:26px 0 0;
@@ -297,11 +148,11 @@ h1 {
 }
 
 
-/* ============================================================
+/* =========================
    LINKS
-   ============================================================ */
+========================= */
 
-.links {
+.links{
   display:flex;
   flex-wrap:wrap;
 
@@ -313,7 +164,7 @@ h1 {
   list-style:none;
 }
 
-.links a {
+.links a{
   display:inline-block;
 
   border:1px solid var(--line);
@@ -328,14 +179,10 @@ h1 {
 
   font-size:15px;
 
-  transition:
-    border-color .15s ease,
-    color .15s ease,
-    transform .15s ease;
+  transition:.2s;
 }
 
-.links a:hover,
-.links a:focus-visible {
+.links a:hover{
   border-color:var(--accent);
   color:var(--accent);
 
@@ -343,15 +190,15 @@ h1 {
 }
 
 
-/* ============================================================
+/* =========================
    SECTION
-   ============================================================ */
+========================= */
 
-section {
+section{
   margin-top:52px;
 }
 
-h2 {
+h2{
   font:
     600 12px/1
     var(--mono);
@@ -370,18 +217,18 @@ h2 {
 }
 
 
-/* ============================================================
+/* =========================
    LEARNING
-   ============================================================ */
+========================= */
 
-.learning {
+.learning{
   list-style:none;
 
   padding:0;
   margin:0;
 }
 
-.learning li {
+.learning li{
   border-left:2px solid var(--accent);
 
   padding:2px 0 2px 16px;
@@ -390,22 +237,20 @@ h2 {
 
   color:var(--muted);
 
-  transition:
-    color .15s ease,
-    padding-left .15s ease;
+  transition:.2s;
 }
 
-.learning li:hover {
+.learning li:hover{
   color:var(--text);
   padding-left:20px;
 }
 
 
-/* ============================================================
+/* =========================
    WORKS
-   ============================================================ */
+========================= */
 
-.works {
+.works{
   display:grid;
 
   gap:14px;
@@ -417,33 +262,29 @@ h2 {
     );
 }
 
-.work {
+.work{
   border:1px solid var(--line);
 
   border-radius:12px;
 
-  padding:16px 18px;
+  padding:18px;
 
   background:var(--surface);
 
-  transition:
-    transform .2s ease,
-    border-color .2s ease;
+  transition:.2s;
 }
 
-.work:hover {
+.work:hover{
   transform:translateY(-3px);
-
   border-color:var(--accent);
 }
 
-.work h3 {
+.work h3{
   margin:0 0 6px;
-
   font-size:17px;
 }
 
-.work p {
+.work p{
   margin:0;
 
   color:var(--muted);
@@ -451,7 +292,7 @@ h2 {
   font-size:14.5px;
 }
 
-.work a {
+.work a{
   color:var(--accent);
 
   text-decoration:none;
@@ -463,30 +304,16 @@ h2 {
   margin-top:10px;
 }
 
-.work a:hover {
+.work a:hover{
   text-decoration:underline;
 }
 
-.empty {
-  border:1px dashed var(--line);
 
-  border-radius:12px;
+/* =========================
+   NETWORK
+========================= */
 
-  padding:26px 20px;
-
-  color:var(--muted);
-
-  text-align:center;
-
-  font-size:15px;
-}
-
-
-/* ============================================================
-   NETWORK PANEL
-   ============================================================ */
-
-.panel {
+.panel{
   border:1px solid var(--line);
 
   border-radius:14px;
@@ -496,7 +323,7 @@ h2 {
   padding:4px 20px 16px;
 }
 
-.row {
+.row{
   display:grid;
 
   grid-template-columns:
@@ -512,19 +339,17 @@ h2 {
   align-items:baseline;
 }
 
-.row:last-of-type {
+.row:last-child{
   border-bottom:0;
 }
 
-.row dt {
+.row dt{
   color:var(--muted);
 
   font-size:14px;
-
-  margin:0;
 }
 
-.row dd {
+.row dd{
   margin:0;
 
   font-family:var(--mono);
@@ -536,17 +361,7 @@ h2 {
   word-break:break-all;
 }
 
-.row .note {
-  display:block;
-
-  color:var(--muted);
-
-  font-family:inherit;
-
-  font-size:12.5px;
-}
-
-.hint {
+.hint{
   color:var(--muted);
 
   font-size:14px;
@@ -555,11 +370,11 @@ h2 {
 }
 
 
-/* ============================================================
+/* =========================
    FOOTER
-   ============================================================ */
+========================= */
 
-footer {
+footer{
   margin-top:56px;
 
   padding-top:22px;
@@ -571,45 +386,39 @@ footer {
   font-size:14px;
 }
 
-footer a {
+footer a{
   color:var(--accent);
 
   text-decoration:none;
 }
 
-footer a:hover {
-  text-decoration:underline;
-}
 
-
-/* ============================================================
+/* =========================
    MOBILE
-   ============================================================ */
+========================= */
 
-@media (max-width:520px) {
+@media(max-width:520px){
 
-  .hero {
+  .wrap{
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  .hero{
     padding-top:44px;
     gap:16px;
   }
 
-  .avatar,
-  .avatar-fallback {
+  .avatar{
     width:72px;
     height:72px;
-
-    font-size:28px;
   }
 
-  .row {
+  .row{
     grid-template-columns:1fr;
     gap:2px;
   }
 
-  .wrap {
-    padding-left:18px;
-    padding-right:18px;
-  }
 }
 
 </style>
@@ -621,40 +430,356 @@ footer a:hover {
 <div class="wrap">
 
 
-  <!-- ============================================================
-       HERO
-       ============================================================ -->
+<!-- =========================
+     PROFILE
+========================= -->
 
-  <header class="hero">
+<header class="hero">
 
-    <img
-      class="avatar"
-      id="avatar"
-      alt="รูปโปรไฟล์"
-      width="96"
-      height="96"
+  <img
+    class="avatar"
+    src="https://github.com/MEPHU-o.png?size=192"
+    alt="MEO PHURIN"
+  >
+
+  <div class="hero-text">
+
+    <p class="role">
+      COMPUTER ENGINEERING · YEAR 1
+    </p>
+
+    <h1>
+      MEO PHURIN
+    </h1>
+
+    <p class="tagline">
+      กำลังเรียนรู้การเขียนโปรแกรมและสร้างโปรเจกต์ของตัวเอง 🚀
+    </p>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<p class="about">
+
+สวัสดีครับ ผม <strong>MEO PHURIN</strong>
+นักศึกษาวิศวกรรมคอมพิวเตอร์ ปี 1
+จากมหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน
+
+ผมสนใจด้าน Programming, Web Development,
+Computer Engineering, IoT และ Embedded Systems
+ชอบทดลองสร้างโปรเจกต์ใหม่ ๆ และพัฒนาทักษะของตัวเองอยู่เสมอ
+
+</p>
+
+
+<!-- =========================
+     LINKS
+========================= -->
+
+<ul class="links">
+
+  <li>
+    <a
+      href="https://github.com/MEPHU-o"
+      target="_blank"
+      rel="noopener noreferrer"
     >
+      GitHub
+    </a>
+  </li>
 
-    <div class="hero-text">
+  <li>
+    <a
+      href="https://github.com/MEPHU-o?tab=repositories"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Repositories
+    </a>
+  </li>
 
-      <p
-        class="role"
-        id="role"
-      ></p>
+</ul>
 
-      <h1
-        id="name"
-      ></h1>
 
-      <p
-        class="tagline"
-        id="tagline"
-      ></p>
+<!-- =========================
+     LEARNING
+========================= -->
+
+<section>
+
+  <h2>
+    กำลังเรียนรู้
+  </h2>
+
+  <ul class="learning">
+
+    <li>
+      HTML, CSS และ JavaScript
+    </li>
+
+    <li>
+      Git และ GitHub
+    </li>
+
+    <li>
+      Programming และการแก้ปัญหา
+    </li>
+
+    <li>
+      Computer Engineering
+    </li>
+
+    <li>
+      IoT และ Embedded Systems
+    </li>
+
+  </ul>
+
+</section>
+
+
+<!-- =========================
+     WORKS
+========================= -->
+
+<section>
+
+  <h2>
+    ผลงาน
+  </h2>
+
+  <div class="works">
+
+
+    <article class="work">
+
+      <h3>
+        Personal Portfolio
+      </h3>
+
+      <p>
+        เว็บไซต์โปรไฟล์ส่วนตัว
+        สำหรับแนะนำตัวและรวบรวมผลงาน
+      </p>
+
+      <a
+        href="https://mephu-o.github.io"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        เปิดเว็บไซต์ →
+      </a>
+
+    </article>
+
+
+    <article class="work">
+
+      <h3>
+        GitHub Projects
+      </h3>
+
+      <p>
+        รวมโปรเจกต์และการทดลองด้าน
+        Programming และ Web Development
+      </p>
+
+      <a
+        href="https://github.com/MEPHU-o"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ดูบน GitHub →
+      </a>
+
+    </article>
+
+
+    <article class="work">
+
+      <h3>
+        Computer Engineering
+      </h3>
+
+      <p>
+        เรียนรู้ระบบคอมพิวเตอร์
+        การเขียนโปรแกรม IoT และ Embedded Systems
+      </p>
+
+      <a
+        href="https://github.com/MEPHU-o"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ดูโปรเจกต์ →
+      </a>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     NETWORK
+========================= -->
+
+<section>
+
+  <h2>
+    ข้อมูลการเชื่อมต่อของหน้านี้
+  </h2>
+
+  <div class="panel">
+
+    <div class="row">
+
+      <dt>URL</dt>
+
+      <dd id="url">
+        กำลังโหลด...
+      </dd>
 
     </div>
 
-  </header>
+
+    <div class="row">
+
+      <dt>Protocol</dt>
+
+      <dd id="protocol">
+        กำลังโหลด...
+      </dd>
+
+    </div>
 
 
-  <!-- ============================================================
-    
+    <div class="row">
+
+      <dt>Host</dt>
+
+      <dd id="host">
+        กำลังโหลด...
+      </dd>
+
+    </div>
+
+
+    <div class="row">
+
+      <dt>สถานะ</dt>
+
+      <dd id="online">
+        กำลังตรวจสอบ...
+      </dd>
+
+    </div>
+
+
+    <div class="row">
+
+      <dt>ภาษาเบราว์เซอร์</dt>
+
+      <dd id="language">
+        กำลังโหลด...
+      </dd>
+
+    </div>
+
+
+    <div class="row">
+
+      <dt>หน้าจอ</dt>
+
+      <dd id="screen">
+        กำลังโหลด...
+      </dd>
+
+    </div>
+
+
+  </div>
+
+
+  <p class="hint">
+
+    กด F12 → Network → Ctrl+F5
+    เพื่อดูข้อมูลการโหลดเว็บไซต์แบบละเอียด
+
+  </p>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  ⚡ MEO PHURIN ·
+
+  สร้างด้วย HTML, CSS และ JavaScript ·
+
+  โฮสต์บน GitHub Pages ·
+
+  <a
+    href="https://github.com/MEPHU-o"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ดูซอร์สโค้ด
+  </a>
+
+</footer>
+
+
+</div>
+
+
+<script>
+
+/* =========================
+   NETWORK INFORMATION
+========================= */
+
+document.getElementById("url").textContent =
+  location.href;
+
+document.getElementById("protocol").textContent =
+  location.protocol;
+
+document.getElementById("host").textContent =
+  location.host;
+
+document.getElementById("online").textContent =
+  navigator.onLine
+    ? "Online"
+    : "Offline";
+
+document.getElementById("language").textContent =
+  navigator.language;
+
+document.getElementById("screen").textContent =
+  screen.width + " × " + screen.height;
+
+
+/* =========================
+   CONSOLE
+========================= */
+
+console.log("⚡ MEO PHURIN Portfolio");
+
+console.log(
+  "GitHub: https://github.com/MEPHU-o"
+);
+
+</script>
